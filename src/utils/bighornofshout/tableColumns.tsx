@@ -31,24 +31,24 @@ export const columns = (inputText: { id: string; value: string }[]): ColumnDef<H
     accessorKey: "date_send",
     header: "날짜",
     cell: props => (
-      <p className="text-center w-[100px] max-w-[160px]">
+      <span className="text-center">
         {convertToKoreanTime(props.getValue()).formattedDate}
         <br />
         {convertToKoreanTime(props.getValue()).formattedTime}
-      </p>
+      </span>
     ),
     enableColumnFilter: false,
   },
   {
     accessorKey: "character_name",
     header: "닉네임",
-    cell: props => <p className="text-center w-[100px] max-w-[160px]">{props.getValue()}</p>,
+    cell: props => <span>{props.getValue()}</span>,
     enableColumnFilter: true,
   },
   {
     accessorKey: "message",
     header: "내용",
-    cell: props => <p className="max-w-[600px]">{highlightText(props.getValue(), inputText)}</p>,
+    cell: props => <span>{highlightText(props.getValue(), inputText)}</span>,
     enableColumnFilter: true,
   },
 ];

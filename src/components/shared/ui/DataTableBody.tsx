@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 type DataTableBodyProps = {
-  table: Table<ItemListsTypes> | Table<HornListTypes>; // 정확한 타입을 명시
+  table: Table<ItemListsTypes> | Table<HornListTypes>;
 };
 
 export default function DataTableBody({ table }: DataTableBodyProps) {
